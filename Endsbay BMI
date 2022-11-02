@@ -1,0 +1,57 @@
+package tugasteros;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author WINDOWS 11
+ */
+public class Tugasteros {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+     
+        Scanner in = new Scanner(System.in);
+        int beratbadan;
+        double tinggibadan;
+        double bmi;
+         
+       
+        System.out.print("Masukkan tinggi badan anda dalam satuan CM: ");
+        tinggibadan = in.nextDouble();
+        System.out.print("Masukkan berat badan anda dalam satuan KG: ");
+        beratbadan = in.nextInt();
+         tinggibadan = tinggibadan/100;
+        bmi = beratbadan/(tinggibadan*tinggibadan);
+        System.out.println("");
+        System.out.println("Index BMI anda \t: "+bmi);
+        System.out.println("");
+         
+
+        if(bmi<18.5){
+            System.out.println("anda kurang bb");
+        }
+        else if(bmi>18.5 && bmi<22.9){
+            System.out.println("bb anda normal");
+        }
+        else if(bmi>23 && bmi<24.9){
+            System.out.println("anda kelebihan bb");
+        }
+        else if(bmi>25 && bmi<29.9){
+            System.out.println("anda obesitas ringan");
+        }
+        else if(bmi>30){
+            System.out.println("anda obesitas beratpol");
+        }
+        else {
+            System.out.println("maaf tidak masuk");
+        }
+        System.out.println("");
+
+    }
+}
+    
+    
+
